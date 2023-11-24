@@ -1,15 +1,9 @@
-void main() {
-  MockApiProject1 project1 = MockApiProject1("Mock Api Project1");
-  project1.printStr();
+import 'service/network_service.dart';
+
+void main()async{
+
+  String response = await NetworkService.getData(NetworkService.apiArt);
+
+  print(response);
+
 }
-
-class MockApiProject1 {
-  late String str;
-
-  MockApiProject1(this.str);
-
-  void printStr() {
-    print(str);
-  }
-}
-
